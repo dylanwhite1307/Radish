@@ -1,0 +1,30 @@
+
+
+.radish-logo {
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+  padding: 11.667vh;
+  animation: opacity 3s;
+
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.radish-logo  {
+  img{
+    display: inline-block;
+    width: 50.1041vw;
+    height: 76.667vh;
+    object-fit: contain;
+  }
+  
+}

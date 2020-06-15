@@ -1,0 +1,245 @@
+.juicy-radish {
+  position: relative;
+
+  .header,
+  .footer {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+}
+
+
+
+.juicy-radish-container {
+  flex: 1;
+  padding-bottom: 5.21vw;
+}
+
+/***** BACKGROUND *****/
+
+.juicy-radish-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include flexbox;
+  overflow: hidden;
+
+}
+
+.juicy-radish-bg__radish {
+  width: 57.8125vw;
+  height: 100vh;
+  background: #f6f6f6;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: inline-block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(22.395833333333336vw);
+  }
+}
+
+@media(max-width: 1700px) {
+  .juicy-radish-bg__radish {
+    img {
+      transform: translateX(17vw);
+    }
+  }
+}
+
+@media(max-width: 1500px) {
+  .juicy-radish-bg__radish {
+    img {
+      transform: translateX(10vw);
+    }
+  }
+}
+
+@media(max-width: 1300px) {
+  .juicy-radish-bg__radish {
+    img {
+      transform: translateX(0vw);
+    }
+  }
+}
+
+.juicy-radish-bg__word {
+  width: 42.1875vw;
+  height: 100vh;
+  position: relative;
+  background: url('../img/secondPage/purple-bg-effect.png') 0 0/ cover no-repeat, url('../img/secondPage/purple-bg.png') 0 0/ cover no-repeat;
+
+  @media(min-width: 600px) and (max-width: 1400px) {
+    background: url('../img/secondPage/purple-bg-effect.png') 0 0/ cover no-repeat, url('../img/secondPage/purple-bg-1025.png') 0 0/ cover no-repeat;
+  }
+
+  @media(min-width: 0px) and (max-width: 599px) {
+    background: url('../img/secondPage/purple-bg-effect.png') 0 0/ cover no-repeat, url('../img/secondPage/purple-bg-599.png') 0 0/ cover no-repeat;
+  }
+
+  img {
+    position: absolute;
+    right: 3.125vw;
+    bottom: 8.703703703703702vh;
+    display: inline-block;
+    width: 42.29166666666667vw;
+    height: 55.55555555555555vh;
+    object-fit: contain;
+  }
+}
+
+
+
+/***** CONTENT *****/
+
+.juicy-radish-content {
+  width: 35.989583333333336vw;
+  margin: 4.647916666666667vw 0 0 3.125vw;
+  @include flexbox;
+  flex-direction: column;
+
+  h2 {
+    color: #ed1a7e;
+    font-family: 'ProximaNova-Black', Helvetica, Arial, sans-serif;
+    font-size: 6.770833333333334vw;
+    line-height: 5.729166666666667vw;
+
+  }
+
+  p {
+    margin: 5.989583333333334vw 0 0 0;
+    color: #1b1b1b;
+    font-family: 'ProximaNova-Black', Helvetica, Arial, sans-serif;
+    font-size: 2.604166666666667vw;
+    line-height: 3.125vw;
+  }
+}
+
+@media (max-height: 2160px) and (min-width: 1850px) {
+  .juicy-radish-content {
+    h2 {
+      font-size: 12.037vh;
+      line-height: 10.1852vh;
+    }
+
+    p {
+      margin: 10.6481vh 0 0 0;
+      font-size: 4.6296vh;
+      line-height: 5.5556vh;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .juicy-radish-content {
+    h2 {
+      font-size: 8vw;
+      line-height: 7vw;
+    }
+
+    p {
+      font-size: 4vw;
+      line-height: 4.5vw
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .juicy-radish-content {
+    h2 {
+      font-size: 10vw;
+      line-height: 9vw;
+    }
+
+    p {
+      font-size: 6vw;
+      line-height: 6.5vw;
+    }
+  }
+}
+
+@media (max-height: 768px) and (orientation: landscape) {
+  .juicy-radish-content {
+    h2 {
+      font-size: 7vw;
+      line-height: 6vw;
+    }
+
+    p {
+      font-size: 4vw;
+      line-height: 4.5vw;
+    }
+  }
+}
+
+
+@media (max-height: 450px) and (orientation: landscape) {
+  .juicy-radish-content {
+    margin: 1vw 0 0 3.125vw;
+
+    h2 {
+      font-size: 5vw;
+      line-height: 4vw;
+    }
+
+    p {
+      margin: 3vw 0 0 0;
+      font-size: 3vw;
+      line-height: 3.5vw;
+    }
+  }
+}
+
+@media (max-width: 700px) and (orientation: portrait) {
+
+  .juicy-radish {
+    .container {
+      overflow: auto;
+    }
+  }
+
+
+}
+
+@media (max-height: 700px) and (orientation: landscape) {
+
+  .juicy-radish {
+    .container {
+      overflow: auto;
+    }
+
+  }
+
+}
+
+@media (max-height: 900px) and (orientation: landscape) {
+
+  .juicy-radish {
+    .container {
+      overflow: auto;
+    }
+  }
+
+}
+
+.juicy-radish {
+  @media(max-height: 450px) and (orientation: landscape) {
+    .footer {
+      margin: 1vw 0 1vw 0;
+    }
+  }
+
+  @media(max-width: 1100px) {
+    .footer {
+      margin: 35px 0 35px 0;
+    }
+  }
+}

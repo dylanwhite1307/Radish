@@ -1,0 +1,122 @@
+.bon-appetit {
+  position: relative;
+
+  .table-of-contents {
+    top: 39%;
+  }
+}
+
+.bon-appetit-container {
+  @include flexbox;
+  height: 100vh;
+
+}
+
+.bon-appetit-content {
+  width: 57.81vw;
+  margin: -5.99vw 0 0 0;
+  padding: 0 0 0 10.68vw;
+  z-index: 1;
+  @include flexbox;
+  align-items: center;
+}
+
+.bon-appetit-content__item {
+
+  color: #df0c70;
+  font-family: "ProximaNova-Black", Helvetica, Arial, sans-serif;
+  @include adaptiv-font(130, 80);
+  @include adaptiv-line(120, 70);
+}
+
+.bon-appetit-image {
+  width: 42.19vw;
+  background: #f6f6f6;
+  @include flexbox;
+  align-items: center;
+  position: relative;
+
+}
+
+.bon-appetit-image__item {
+  margin: 1.56vw 0 0 -16.51vw;
+  transform: translate(-150vw, 0);
+  transition: all 2s ease-out;
+
+  img {
+    width: 639px;
+    height: 640px;
+  }
+}
+
+.bon-appetit-image__item.active {
+  transform: translate(0, 0) rotate(720deg);
+}
+
+@media (min-width:1921px) {
+  .bon-appetit-content__item {
+    font-size: 6.77vw;
+    line-height: 6.25vw;
+  }
+
+  .bon-appetit-image__item {
+    img {
+      width: 33.28vw;
+      height: 33.33vw;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .bon-appetit-content__item {
+    @include adaptiv-font(130, 60);
+    @include adaptiv-line(120, 50);
+  }
+
+  .bon-appetit-image__item {
+    margin-left: -22vw;
+
+    img {
+      width: 511.2px;
+      height: 512px;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .bon-appetit-content {
+    padding-left: 4vw;
+  }
+
+  .bon-appetit-content__item {
+    @include adaptiv-font(130, 50);
+    @include adaptiv-line(120, 40);
+  }
+
+  .bon-appetit-image__item {
+    margin-left: -30vw;
+
+    img {
+      width: 408.96px;
+      height: 409.6px;
+    }
+  }
+}
+
+@media(max-height: 500px) and (orientation: landscape) and (max-width:900px) {
+
+  .bon-appetit-content__item {
+    margin-top: 30px;
+    @include adaptiv-font(130, 20);
+    @include adaptiv-line(120, 10);
+  }
+
+  .bon-appetit-image__item {
+    margin-left: -10vw;
+
+    img {
+      width: 408.96px;
+      height: 409.6px;
+    }
+  }
+}

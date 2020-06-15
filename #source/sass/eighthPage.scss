@@ -1,0 +1,1002 @@
+.cooking-okroshka {
+  position: relative;
+
+  .table-of-contents {
+    top: 40%;
+  }
+}
+
+.cooking-okroshka-container {
+  @include flexbox;
+}
+
+.cooking-okroshka-content {
+  margin: 11.88vw 0 0 3.33vw;
+  width: 30.47vw;
+
+  h2 {
+    color: #1b1b1b;
+    font-family: "ProximaNova-Black", Helvetica, Arial, sans-serif;
+    @include adaptiv-font(70, 40);
+  }
+
+  p {
+    color: #757575;
+    font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
+    @include adaptiv-font(22, 16);
+    @include adaptiv-line(34, 20);
+    margin-top: 1.56vw;
+
+    &:nth-child(1) {
+      margin-top: 3.13vw;
+    }
+  }
+}
+
+.cooking-okroshka-content-form {
+  margin-top: 3.65vw;
+  padding-bottom: 4px;
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+}
+
+.cooking-okroshka-content-form:hover {
+  transform: translateY(-4px);
+}
+
+.cooking-okroshka-content-form:active {
+  transform: translateY(0px);
+}
+
+.cooking-okroshka-content-form__button {
+  color: #f6f6f6;
+  font-size: 22px;
+  font-family: "ProximaNova-Bold";
+  padding: 24px 110px 24px 106px;
+  box-shadow: 0 19px 34px rgba(108, 10, 61, 0.45),
+    0 3px 40px rgba(58, 9, 35, 0.45);
+  border-radius: 37px;
+  background-color: #1b1b1b;
+  transition: all 0.3s ease 0s;
+}
+
+.cooking-okroshka-content-form__button:hover {
+  background-color: #46122a;
+  box-shadow: 0 19px 34px rgba(108, 10, 61, 0.45),
+    0 3px 40px rgba(58, 9, 35, 0.45), 0px 6px 3px black;
+}
+
+.cooking-okroshka-content-form__button:active {
+  box-shadow: 0 19px 34px rgba(108, 10, 61, 0.45),
+    0 3px 40px rgba(58, 9, 35, 0.45), 0px 2px 3px black;
+}
+
+.cooking-okroshka-ingredients {
+  margin: 12vw 0 0 2.2vw;
+  padding-bottom: 440px;
+  width: 1060px;
+  position: relative;
+  transition: transform 1s cubic-bezier(0.48, -0.36, 0.62, 0.01);
+}
+
+.cooking-okroshka-ingredients-container-flex {
+  @include flexbox;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-top: 70px;
+  }
+}
+
+.cooking-okroshka-ingredients__item {
+  @include flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.54, 0, 0.62, 0.01);
+
+  &:nth-child(1) {
+    img {
+      width: auto;
+      height: 117px;
+    }
+  }
+
+  p {
+    padding-top: 30px;
+    font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
+    @include adaptiv-font(20, 14);
+    color: #1b1b1b;
+    transition: opacity 0s 0.3s, transform 0.3s;
+
+    span {
+      color: #7e7e7e;
+      font-family: "ProximaNovaT-Thin", Helvetica, Arial, sans-serif;
+    }
+  }
+}
+
+.cooking-okroshka-ingredients-container-flex {
+  .cooking-okroshka-ingredients__item.active {
+    .ingredients__img-with-span {
+      span {
+        opacity: 0;
+      }
+    }
+
+    p {
+      opacity: 0;
+    }
+  }
+
+  &:nth-child(1) {
+    .cooking-okroshka-ingredients__item.active {
+      &:nth-child(1) {
+        transform: translate(500px, 400px) rotate(150deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(250px, 450px);
+      }
+
+      &:nth-child(3) {
+        transform: translate(0px, 450px);
+      }
+
+      &:nth-child(4) {
+        transform: translate(-250px, 450px);
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .cooking-okroshka-ingredients__item.active {
+      &:nth-child(1) {
+        transform: translate(500px, 200px);
+      }
+
+      &:nth-child(2) {
+        transform: translate(250px, 200px);
+      }
+
+      &:nth-child(3) {
+        transform: translate(0px, 200px);
+      }
+
+      &:nth-child(4) {
+        transform: translate(-250px, 200px);
+      }
+    }
+  }
+}
+
+.ingredients__img-with-span {
+  width: 250px;
+  height: 120px;
+  position: relative;
+
+  @include flexbox;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.plus-item {
+  position: absolute;
+  bottom: 11px;
+  right: 10%;
+  color: #1b1b1b;
+  font-family: "ProximaNova-Black", Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  box-shadow: 0 13px 35px rgba(23, 23, 23, 0.2);
+  border-radius: 90px;
+  background-color: #ffffff;
+  padding: 12px 25px;
+  transition: opacity 0s 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.plus-item:hover {
+  transform: scale(1.1);
+}
+
+.plus-item:active {
+  transform: scale(0.9);
+}
+
+.cooking-okroshka-ingredients-plate {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  img {
+    width: 879px;
+    height: 651px;
+    object-fit: contain;
+  }
+}
+
+.cooking-okroshka-ingredients.down {
+  transform: translate(0, 100vh);
+}
+
+.plate-animation {
+  background: url("../img/eightPage/okroshka.png") 0 0 / contain no-repeat;
+  width: 639px;
+  height: 640px;
+  position: absolute;
+  top: 100vh;
+  left: 250px;
+  display: none;
+
+  @media (min-width: 600px) and (max-width: 1400px) {
+    background: url("../img/eightPage/okroshka-1025.png") 0 0 / contain no-repeat;
+  }
+
+  @media (min-width: 0px) and (max-width: 599px) {
+    background: url("../img/eightPage/okroshka-599.png") 0 0 / contain no-repeat;
+  }
+}
+
+.plate-animation.down {
+  display: block;
+  animation: plate-animation-down 8s 2s;
+}
+
+@keyframes plate-animation-down {
+  0% {
+    transform: translate(0);
+  }
+
+  5% {
+    transform: translate(0, -260vh);
+    animation-timing-function: ease-in-out;
+  }
+
+  10% {
+    transform: translate(0, -185vh);
+    animation-timing-function: ease-out;
+  }
+
+  15% {
+    transform: translate(0, -235vh);
+    animation-timing-function: ease-in;
+  }
+
+  20% {
+    transform: translate(0, -185vh);
+    animation-timing-function: ease-out;
+  }
+
+  25% {
+    transform: translate(0, -225vh);
+    animation-timing-function: ease-in;
+  }
+
+  30% {
+    transform: translate(0, -185vh);
+    animation-timing-function: ease-out;
+  }
+
+  35% {
+    transform: translate(0, -210vh);
+    animation-timing-function: ease-in;
+  }
+
+  40% {
+    transform: translate(0, -185vh);
+    animation-timing-function: ease-out;
+  }
+
+  45% {
+    transform: translate(0, -205vh);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: translate(0, -185vh);
+    animation-timing-function: ease-out;
+  }
+
+  55% {
+    transform: translate(0, -200vh);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: translate(0, -185vh);
+    animation-timing-function: ease-out;
+  }
+
+  75% {
+    transform: translate(100vw, -185vh) rotate(800deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+
+
+@media only screen and (-webkit-device-pixel-ratio: 2) and (min-width: 1921px) {
+  .cooking-okroshka-content {
+    h2 {
+      font-size: 3.65vw;
+    }
+
+    p {
+      font-size: 1.15vw;
+      line-height: 1.77vw;
+    }
+  }
+
+  .cooking-okroshka-content-form {
+    padding-bottom: 0.2083vw;
+  }
+
+  .cooking-okroshka-content-form:hover {
+    transform: translateY(-0.2083vw);
+  }
+
+  .cooking-okroshka-content-form__button {
+    font-size: 1.15vw;
+    padding: 1.25vw 5.73vw 1.25vw 5.52vw;
+
+    box-shadow: 0 0.99vw 1.77vw rgba(108, 10, 61, 0.45),
+      0 0.1563vw 2.08vw rgba(58, 9, 35, 0.45);
+    border-radius: 1.93vw;
+  }
+
+  .cooking-okroshka-content-form__button:hover {
+    box-shadow: 0 0.99vw 1.77vw rgba(108, 10, 61, 0.45),
+      0 0.1563vw 2.08vw rgba(58, 9, 35, 0.45), 0px 0.3125vw 0.1563vw black;
+  }
+
+  .cooking-okroshka-content-form__button:active {
+    box-shadow: 0 0.99vw 1.77vw rgba(108, 10, 61, 0.45),
+      0 0.1563vw 2.08vw rgba(58, 9, 35, 0.45), 0px 0.1042vw 0.1563vw black;
+  }
+
+  .cooking-okroshka-ingredients {
+    padding-bottom: 22.92vw;
+    width: 55.21vw;
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:last-child {
+      margin-top: 3.65vw;
+    }
+  }
+
+  .cooking-okroshka-ingredients__item {
+    p {
+      padding-top: 1.56vw;
+      font-size: 1.04vw;
+    }
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(26.04vw, 20.83vw) rotate(150deg);
+        }
+
+        &:nth-child(2) {
+          transform: translate(13.02vw, 23.44vw);
+        }
+
+        &:nth-child(3) {
+          transform: translate(0px, 23.44vw);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-13.02vw, 23.44vw);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(26.04vw, 10.42vw);
+        }
+
+        &:nth-child(2) {
+          transform: translate(13.02vw, 10.42vw);
+        }
+
+        &:nth-child(3) {
+          transform: translate(0px, 10.42vw);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-13.02vw, 10.42vw);
+        }
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item {
+        &:nth-child(1) {
+          img {
+            height: 6.09vw;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            height: 5.83vw;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            height: 5.05vw;
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            height: 4.32vw;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .cooking-okroshka-ingredients__item {
+        &:nth-child(1) {
+          img {
+            height: 5.89vw;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            height: 5.21vw;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            height: 5.1vw;
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            height: 3.49vw;
+          }
+        }
+      }
+    }
+  }
+
+  .ingredients__img-with-span {
+    width: 13.02vw;
+    height: 6.25vw;
+  }
+
+  .plus-item {
+    bottom: 0.57vw;
+    font-size: 2.5vw;
+    box-shadow: 0 0.68vw 1.82vw rgba(23, 23, 23, 0.2);
+    border-radius: 4.69vw;
+    padding: 0.63vw 1.3vw;
+  }
+
+  .cooking-okroshka-ingredients-plate {
+    img {
+      width: 45.78vw;
+      height: 33.91vw;
+    }
+  }
+
+  .plate-animation {
+    width: 33.28vw;
+    height: 33.33vw;
+    left: 13.02vw;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) and (max-width: 1500px) and (max-device-width: 1500px) {
+  .cooking-okroshka {
+    .container {
+
+      .footer,
+      .header {
+        position: relative;
+      }
+
+      overflow-y: scroll;
+    }
+  }
+
+  .cooking-okroshka-container {
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cooking-okroshka-content,
+  .cooking-okroshka-ingredients {
+    width: auto;
+  }
+
+  .cooking-okroshka-content {
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10vw;
+    margin-top: 5vw;
+  }
+
+  .cooking-okroshka-ingredients {
+    margin: 6vw 0 0 0;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    .cooking-okroshka-ingredients__item.active {
+      .ingredients__img-with-span {
+        span {
+          opacity: 0;
+        }
+      }
+
+      p {
+        opacity: 0;
+      }
+    }
+
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(350px, 350px) rotate(150deg);
+        }
+
+        &:nth-child(2) {
+          transform: translate(150px, 400px);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-100px, 400px);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-350px, 400px);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(350px, 150px);
+        }
+
+        &:nth-child(2) {
+          transform: translate(150px, 150px);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-100px, 150px);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-350px, 150px);
+        }
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients-plate {
+    position: relative;
+    margin-top: -250px;
+  }
+
+  .plate-animation {
+    left: 13.33vw;
+  }
+
+  @keyframes plate-animation-down {
+    0% {
+      transform: translate(0);
+    }
+
+    5% {
+      transform: translate(0, -260vh);
+      animation-timing-function: ease-in-out;
+    }
+
+    10% {
+      transform: translate(0, -185vh);
+      animation-timing-function: ease-out;
+    }
+
+    15% {
+      transform: translate(0, -235vh);
+      animation-timing-function: ease-in;
+    }
+
+    20% {
+      transform: translate(0, -185vh);
+      animation-timing-function: ease-out;
+    }
+
+    25% {
+      transform: translate(0, -225vh);
+      animation-timing-function: ease-in;
+    }
+
+    30% {
+      transform: translate(0, -185vh);
+      animation-timing-function: ease-out;
+    }
+
+    35% {
+      transform: translate(0, -210vh);
+      animation-timing-function: ease-in;
+    }
+
+    40% {
+      transform: translate(0, -185vh);
+      animation-timing-function: ease-out;
+    }
+
+    45% {
+      transform: translate(0, -205vh);
+      animation-timing-function: ease-in;
+    }
+
+    50% {
+      transform: translate(0, -185vh);
+      animation-timing-function: ease-out;
+    }
+
+    55% {
+      transform: translate(0, -200vh);
+      animation-timing-function: ease-in;
+    }
+
+    60% {
+      transform: translate(0, -185vh);
+      animation-timing-function: ease-out;
+    }
+
+    75% {
+      transform: translate(200vw, -185vh) rotate(800deg);
+      animation-timing-function: ease-in;
+    }
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) and(max-width: 1000px) and (max-device-width: 1000px) {
+  .cooking-okroshka-content {
+    margin-top: 8vw;
+
+    p {
+      margin-top: 2vw;
+
+      &:last-child {
+        margin-bottom: 2vw;
+      }
+    }
+  }
+
+  .cooking-okroshka-content-form__button {
+    @include adaptiv-font(22, 16);
+  }
+
+  .cooking-okroshka-ingredients {
+    width: auto;
+  }
+
+  .ingredients__img-with-span {
+    width: 25vw;
+    height: 12vw;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) and(max-width: 820px) and (max-device-width: 800px) {
+  .cooking-okroshka-ingredients {
+    margin-top: 10vw;
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item {
+        &:nth-child(1) {
+          img {
+            height: 93.6px;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            height: 89.6px;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            height: 77.6px;
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            height: 66.4px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .cooking-okroshka-ingredients__item {
+        &:nth-child(1) {
+          img {
+            height: 90.4px;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            height: 80px;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            height: 78.4px;
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            height: 53.6px;
+          }
+        }
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(42.68vw, 42.68vw) rotate(150deg);
+        }
+
+        &:nth-child(2) {
+          transform: translate(18.29vw, 48.78vw);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-12.2vw, 48.78vw);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-42.68vw, 48.78vw);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(42.68vw, 18.29vw);
+        }
+
+        &:nth-child(2) {
+          transform: translate(18.29vw, 18.29vw);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-12.2vw, 18.29vw);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-42.68vw, 18.29vw);
+        }
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients-plate {
+    img {
+      width: 107.2vw;
+      height: auto;
+    }
+
+    margin-top: -24.39vw;
+  }
+
+  .plus-item {
+    bottom: 11px;
+    right: 10%;
+    font-size: 38.4px;
+    border-radius: 90px;
+    padding: 9.6px 20px;
+  }
+
+  .plate-animation {
+    width: 77.93vw;
+    height: 78.05vw;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) and(max-width: 650px) and (max-device-width: 600px) {
+  .cooking-okroshka-ingredients__item {
+    p {
+      display: none;
+    }
+  }
+
+  .plus-item {
+    position: relative;
+  }
+
+  .ingredients__img-with-span {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .cooking-okroshka-ingredients {
+    margin-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(40vw, 30vw) rotate(150deg);
+        }
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients-plate {
+    margin-top: -30vw;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 2) and(max-width: 500px) and (max-device-width: 500px) {
+  .cooking-okroshka-content {
+    margin-top: 60px;
+
+    p {
+      &:first-child {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item {
+        &:nth-child(1) {
+          img {
+            height: 74.88px;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            height: 71.68px;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            height: 62.14px;
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            height: 53.12px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 80px;
+
+      .cooking-okroshka-ingredients__item {
+        &:nth-child(1) {
+          img {
+            height: 72.32px;
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            height: 64px;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            height: 62.72px;
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            height: 42.88px;
+          }
+        }
+      }
+    }
+  }
+
+  .cooking-okroshka-ingredients {
+    padding-bottom: 70px;
+  }
+
+  .cooking-okroshka-ingredients-plate {
+    margin-top: -20vw;
+  }
+
+  .cooking-okroshka-content-form {
+    margin-top: 70px;
+  }
+
+  .cooking-okroshka-content-form__button {
+    padding: 24px 80px 24px 76px;
+    border-radius: 37px;
+  }
+
+  .cooking-okroshka-ingredients-container-flex {
+    &:nth-child(1) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(30vw, 30vw) rotate(150deg);
+        }
+
+        &:nth-child(2) {
+          transform: translate(18.29vw, 68.78vw);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-12.2vw, 68.78vw);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-42.68vw, 68.78vw);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .cooking-okroshka-ingredients__item.active {
+        &:nth-child(1) {
+          transform: translate(42.68vw, 38.29vw);
+        }
+
+        &:nth-child(2) {
+          transform: translate(18.29vw, 38.29vw);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-12.2vw, 38.29vw);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-42.68vw, 38.29vw);
+        }
+      }
+    }
+  }
+}
